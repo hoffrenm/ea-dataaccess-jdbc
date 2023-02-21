@@ -1,5 +1,6 @@
 package org.example.Repositories;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.sql.Connection;
@@ -9,9 +10,18 @@ import java.sql.SQLException;
 @Component
 public class CustomerRepository extends Generic {
 
-    private String url = "jdbc:postgresql://localhost:5432/chinook";
-    private String username = "postgres";
-    private String password = "postgres";
+    private final String url;
+    private final String username;
+    private final String password;
+
+    public CustomerRepository(
+            @Value("${spring.datasource.url}") String url,
+            @Value("${spring.datasource.username}") String username,
+            @Value("${spring.datasource.password}") String password) {
+        this.url = url;
+        this.username = username;
+        this.password = password;
+    }
 
     public void test() {
         try(Connection conn = DriverManager.getConnection(url, username,password);) {
