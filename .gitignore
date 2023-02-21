@@ -163,5 +163,6 @@ nb-configuration.xml
 
 .iml
 ea-dataaccess-jdbc.iml
+*.iml
 
 
