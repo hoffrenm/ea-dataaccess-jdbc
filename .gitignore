@@ -160,3 +160,9 @@ nb-configuration.xml
 ## OS X
 ##############################
 .DS_Store
+
+.iml
+ea-dataaccess-jdbc.iml
+*.iml
+
+
