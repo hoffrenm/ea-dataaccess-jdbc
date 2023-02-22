@@ -1,1 +1,1 @@
-UPDATE superheroes SET name = 'SuperiorMan' where name = 'Superman';
+UPDATE superhero SET name = 'SuperiorMan' where name = 'Superman';

@@ -1,1 +1,1 @@
-DELETE FROM assistants WHERE name = 'Robin';
+DELETE FROM assistant WHERE name = 'Robin';

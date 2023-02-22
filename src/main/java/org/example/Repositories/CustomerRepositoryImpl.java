@@ -60,7 +60,6 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         return customer;
     }
 
-
     // Assignment part 2.1 Read all the customers in the database
 
     /**
@@ -227,8 +226,15 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         return rowsAffected;
     }
 
-
     // Assignment part 2.6 Update an existing customer
+
+    /**
+     * Updates a single customer record by customer's id
+     *
+     * @param customer to be updated
+     * @return 1 or higher in case update worked, 0 in case it did not
+     */
+
     public int update(Customer customer) {
         String sql = "UPDATE customer SET first_name = ?, last_name = ?, country = ?, postal_code = ?, phone = ?, email = ? WHERE customer_id = ?";
         int result = 0;
@@ -251,6 +257,14 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     // Assignment part 2.7 Return the country with the most customers
+
+    /**
+     * Returns a country that has the most customers.
+     *
+     * @return the country with the most customers
+     * @throws SQLException in case the database connection fails
+     */
+
     public CustomerCountry countryWithMostCustomers() throws SQLException {
 
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
@@ -268,6 +282,14 @@ public class CustomerRepositoryImpl implements CustomerRepository {
 
 
     // Assignment part 2.8 Return the customer who is the highest spender
+
+    /**
+     * Returns id, first name, last name and the total sum of the customer that 
+     * has the highest total in the invoices.
+     *
+     * Assignment part 2.8
+     * @return the customer who is the highest spender
+     */
     public CustomerSpender highestSpender() {
         String sql = "SELECT customer.customer_id, customer.first_name, customer.last_name, SUM(invoice.total) as total FROM customer JOIN invoice ON customer.customer_id=invoice.customer_id GROUP BY customer.customer_id ORDER BY total DESC LIMIT 1";
         CustomerSpender customer = null;
@@ -291,7 +313,16 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         return customer;
     }
 
-    // Assignment part 2.9 For a given customer, return their most popular genre
+    // Assignment part 2.9: For a given customer, return their most popular genre
+
+    /**
+     * Returns customer's most popular genre
+     *
+     * @param customer_id the customer id
+     * @return the name of the most popular genre for the customer and the count of tracks
+     * @throws SQLException in case the database connection fails
+     */
+
     public CustomerGenre mostPopularGenre(Integer customer_id) throws SQLException {
 
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
@@ -313,7 +344,12 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         }
     }
 
-    //Default delete methods
+    /**
+     * Default delete methods
+     * @param object
+     * @return
+     */
+
     @Override
     public int delete(Customer object) {
         return 0;
