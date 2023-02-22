@@ -13,4 +13,6 @@ All functionality criteria is met.
 
 The objective of this part was to manipulate SQL data in Spring using a the JDBC with the PostgreSQL driver. 
 
+![image](https://user-images.githubusercontent.com/89412182/220617587-765ff2db-2cfb-4db0-a4a7-eaf73a30d89e.png)
+
 All functionality criteria is met.
