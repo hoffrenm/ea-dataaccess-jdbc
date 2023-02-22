@@ -14,4 +14,4 @@ CREATE TABLE power(
 	id SERIAL PRIMARY KEY,
 	name VARCHAR (50) NOT NULL,
 	description VARCHAR (50) NOT NULL
-)
+);
