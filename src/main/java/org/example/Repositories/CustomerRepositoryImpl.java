@@ -40,7 +40,6 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         return customer;
     }
 
-
     // Assignment part 2.1 Read all the customers in the database
 
     @Override
@@ -243,6 +242,7 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
     // Assignment part 2.9 For a given customer, return their most popular genre
+
     public CustomerGenre mostPopularGenre(Integer customer_id) throws SQLException {
 
         try (Connection conn = DriverManager.getConnection(url, username, password)) {
