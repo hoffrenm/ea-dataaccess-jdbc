@@ -172,7 +172,11 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
 
-    // Assignment part 2.6 Update an existing customer
+    /**
+     * Assignment part 2.6
+     * @param customer to be updated
+     * @return 1 or higher in case update worked, 0 in case it did not
+     */
 
     public int update(Customer customer) {
         String sql = "UPDATE customer SET first_name = ?, last_name = ?, country = ?, postal_code = ?, phone = ?, email = ? WHERE customer_id = ?";
@@ -195,7 +199,12 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         return result;
     }
 
-    // Assignment part 2.7 Return the country with the most customers
+
+    /**
+     * Assignment part 2.7
+     * @return the country with the most customers
+     * @throws SQLException in case the database connection fails
+     */
 
     public CustomerCountry countryWithMostCustomers() throws SQLException {
 
@@ -213,8 +222,10 @@ public class CustomerRepositoryImpl implements CustomerRepository {
     }
 
 
-    // Assignment part 2.8 Return the customer who is the highest spender
-
+    /**
+     * Assignment part 2.8
+     * @return the customer who is the highest spender
+     */
     public Customer highestSpender() {
         String sql = "SELECT * FROM customer WHERE customer_id = (SELECT customer_id FROM invoice GROUP BY customer_id ORDER BY SUM(invoice.total) DESC LIMIT 1)";
         Customer customer = null;
@@ -241,7 +252,13 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         return customer;
     }
 
-    // Assignment part 2.9 For a given customer, return their most popular genre
+
+    /**
+     * Assignment part 2.9: For a given customer, return their most popular genre
+     * @param customer_id the customer id
+     * @return the name of the most popular genre for the customer and the count of tracks
+     * @throws SQLException in case the database connection fails
+     */
 
     public CustomerGenre mostPopularGenre(Integer customer_id) throws SQLException {
 
@@ -264,7 +281,12 @@ public class CustomerRepositoryImpl implements CustomerRepository {
         }
     }
 
-    //Default delete methods
+    /**
+     * Default delete methods
+     * @param object
+     * @return
+     */
+
     @Override
     public int delete(Customer object) {
         return 0;
