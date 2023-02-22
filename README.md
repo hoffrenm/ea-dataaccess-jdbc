@@ -17,5 +17,5 @@ The objective of this part was to manipulate SQL data in Spring using a the JDBC
 
 All functionality criteria is met.
 
-### Build was done with GitHub actions
+### Build was done using GitHub actions
 
