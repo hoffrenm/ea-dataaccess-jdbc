@@ -1,7 +1,7 @@
 package org.example.Models;
 
 public class Customer {
-    private int id;
+    private Integer id;
     private String firstName;
     private String lastName;
     private String country;
@@ -9,7 +9,7 @@ public class Customer {
     private String phone;
     private String email;
 
-    public Customer(int customerId, String firstName, String lastName, String country, String postalCode, String phone, String email) {
+    public Customer(Integer customerId, String firstName, String lastName, String country, String postalCode, String phone, String email) {
         this.id = customerId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -19,11 +19,11 @@ public class Customer {
         this.email = email;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(Integer customerId) {
         this.id = customerId;
     }
 

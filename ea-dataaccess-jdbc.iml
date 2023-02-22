@@ -20,7 +20,6 @@
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot:3.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:6.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-aop:6.0.4" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-beans:6.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:6.0.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-autoconfigure:3.0.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-logging:3.0.2" level="project" />
@@ -62,5 +61,12 @@
     <orderEntry type="library" scope="TEST" name="Maven: com.vaadin.external.google:android-json:0.0.20131108.vaadin1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:6.0.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xmlunit:xmlunit-core:2.9.1" level="project" />
+    <orderEntry type="library" name="Maven: org.postgresql:postgresql:42.5.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.checkerframework:checker-qual:3.5.0" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-jdbc:3.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.zaxxer:HikariCP:5.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:6.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-beans:6.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:6.0.4" level="project" />
   </component>
 </module>
